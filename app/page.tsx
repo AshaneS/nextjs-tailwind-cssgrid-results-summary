@@ -1,65 +1,79 @@
-import Image from "next/image";
-
+"use client"
+import Score from "@/components/Score";
+import data from "@/public/assets/data.json";
+// grid-cols-[minmax(150px,250px)_10px_minmax(150px,250px)]
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-Neutral-pale-blue flex min-h-screen items-center justify-center">
+      <div className="grid h-screen w-full grid-cols-1 grid-rows-[1fr_10px_1.3fr] justify-center sm:h-[50vh] sm:grid-cols-[minmax(250px,300px)_12px_minmax(250px,300px)] sm:grid-rows-1 md:grid-cols-[minmax(150px,325px)_14px_minmax(150px,325px)] lg:grid-cols-[350px_15px_350px]">
+        {/* card-left */}
+
+        <div className="bg-Gradient-Violet-blue-background box-left z-10 col-start-1 col-end-2 row-start-1 row-end-3 flex flex-1 flex-col items-center justify-between rounded-b-3xl p-4 sm:col-start-1 sm:col-end-3 sm:row-start-1 sm:row-end-2">
+          <div className="text-Neutral-pale-blue/75 text-2xl font-medium sm:text-xl">
+            <h1>Your Result</h1>
+          </div>
+          {/* bog score */}
+          <div className="bg-Gradient-light-slate-blue-background flex h-[35vw] min-h-36 w-[35vw] min-w-36 flex-col items-center justify-center rounded-full sm:h-42 sm:w-42">
+            <h1 className="text-Neutral-white text-[66px] font-bold sm:text-[62px]">
+              76
+            </h1>
+            <span className="text-Neutral-pale-blue/45 text-sm font-bold">
+              of 100
+            </span>
+          </div>
+          {/* great */}
+          <div>
+            <h1 className="text-Neutral-white text-2xl font-semibold sm:text-3xl">
+              Great
+            </h1>
+          </div>
+          <div>
+            <p className="text-Neutral-pale-blue/75 hidden pb-4 text-center text-sm sm:line-clamp-2 sm:text-base">
+              You scored higher than 65% of <br />
+              the people who have taken <br />
+              these tests.
+            </p>
+
+            <p className="text-Neutral-pale-blue/75 pb-4 text-center text-lg sm:line-clamp-2 sm:text-base">
+              You scored higher than 65% of the <br /> people who have taken
+              these tests.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Card-Right */}
+        <div className="bg-Neutral-white box-right col-start-1 col-end-2 row-start-2 row-end-4 flex flex-col justify-between gap-2 px-4 pt-5 pb-4 sm:col-start-2 sm:col-end-4 sm:row-start-1 sm:row-end-2 sm:justify-center sm:gap-8 sm:rounded-r-3xl sm:pr-5 sm:pl-10">
+          <div className="text-Neutral-dark-gray-blue p-3 text-xl font-bold sm:text-xl">
+            <h1>Summary</h1>
+          </div>
+          {data.map((item, i) => (
+            <div
+              key={i}
+              className={`grid grid-cols-2 rounded-xl p-3 sm:p-2 ${
+                item.category === "Reaction" &&
+                "bg-Primary-light-red/8 text-Primary-light-red"
+              } ${
+                item.category === "Memory" &&
+                "bg-Primary-orangey-yellow/8 text-Primary-orangey-yellow"
+              } ${
+                item.category === "Verbal" &&
+                "bg-Primary-green-teal/8 text-Primary-green-teal"
+              } ${
+                item.category === "Visual" &&
+                "bg-Primary-cobalt-blue/8 text-Primary-cobalt-blue"
+              }`}
+            >
+              <Score item={item} />
+            </div>
+          ))}
+
+          <div>
+            <button className="bg-Neutral-dark-gray-blue text-Neutral-white w-full rounded-full px-3 py-4 text-lg font-medium sm:py-5 sm:text-lg sm:font-bold">
+              Continue
+            </button>
+          </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-Primary-light-red: hsl(0, 100%, 67%);
+  --color-Primary-orangey-yellow: hsl(39, 100%, 56%);
+  --color-Primary-green-teal: hsl(166, 100%, 37%);
+  --color-Primary-cobalt-blue: hsl(234, 85%, 45%);
+
+  --color-Gradient-light-slate-blue-background: hsl(252, 100%, 67%);
+  --color-Gradient-Light-royal-blue-background: hsl(241, 81%, 54%);
+  --color-Gradient-Violet-blue-background: hsla(256, 72%, 46%, 1);
+  --color-Gradient-Persian-blue-background: hsla(241, 72%, 46%, 0);
+
+  --color-Neutral-white: hsl(0, 0%, 100%);
+  --color-Neutral-pale-blue: hsl(221, 100%, 96%);
+  --color-Neutral-light-lavender: hsl(241, 100%, 89%);
+  --color-Neutral-dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,3 +38,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns:minmax(200px, 250px) 15px minmax(200px, 250px);
+  grid-row: 1;
+} */
+
+
+/* .box-left {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.box-right {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+ */
+

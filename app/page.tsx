@@ -28,13 +28,13 @@ export default function Home() {
             </h1>
           </div>
           <div>
-            <p className="text-Neutral-pale-blue/75 hidden pb-4 text-center text-sm sm:line-clamp-2 sm:text-base">
+            <p className="text-Neutral-pale-blue/75 hidden sm:block pb-4 text-center text-sm sm:text-base">
               You scored higher than 65% of <br />
               the people who have taken <br />
               these tests.
             </p>
 
-            <p className="text-Neutral-pale-blue/75 pb-4 text-center text-lg sm:line-clamp-2 sm:text-base">
+            <p className="text-Neutral-pale-blue/75 pb-4 text-center text-lg sm:text-base sm:hidden">
               You scored higher than 65% of the <br /> people who have taken
               these tests.
             </p>

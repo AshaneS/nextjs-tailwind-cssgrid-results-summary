@@ -1,9 +1,8 @@
-"use client";
 import Image from "next/image";
 
 interface ScoreItem {
-  category: "Reaction" | "Memory" | "Verbal" | "Visual";
-  score: string;
+  category: string;
+  score: number;
   icon: string;
 }
 

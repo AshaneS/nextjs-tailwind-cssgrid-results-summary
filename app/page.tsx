@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Score from "@/components/Score";
 import data from "@/public/assets/data.json";
 // grid-cols-[minmax(150px,250px)_10px_minmax(150px,250px)]
@@ -8,12 +8,12 @@ export default function Home() {
       <div className="grid h-screen w-full grid-cols-1 grid-rows-[1fr_10px_1.3fr] justify-center sm:h-[50vh] sm:grid-cols-[minmax(250px,300px)_12px_minmax(250px,300px)] sm:grid-rows-1 md:grid-cols-[minmax(150px,325px)_14px_minmax(150px,325px)] lg:grid-cols-[350px_15px_350px]">
         {/* card-left */}
 
-        <div className="bg-Gradient-Violet-blue-background box-left z-10 col-start-1 col-end-2 row-start-1 row-end-3 flex flex-1 flex-col items-center justify-between rounded-b-3xl p-4 sm:col-start-1 sm:col-end-3 sm:row-start-1 sm:row-end-2">
-          <div className="text-Neutral-pale-blue/75 text-2xl font-medium sm:text-xl">
+        <div className="from-Gradient-light-slate-blue-background to-Gradient-Light-royal-blue-background box-left sm: z-10 col-start-1 col-end-2 row-start-1 row-end-3 flex flex-1 flex-col items-center justify-between rounded-3xl rounded-b-3xl bg-linear-to-b p-4 sm:col-start-1 sm:col-end-3 sm:row-start-1 sm:row-end-2">
+          <div className="text-Neutral-pale-blue/75 text-2xl font-medium sm:text-xl mt-8">
             <h1>Your Result</h1>
           </div>
           {/* bog score */}
-          <div className="bg-Gradient-light-slate-blue-background flex h-[35vw] min-h-36 w-[35vw] min-w-36 flex-col items-center justify-center rounded-full sm:h-42 sm:w-42">
+          <div className="from-Gradient-Light-royal-blue-background flex h-[35vw] min-h-36 w-[35vw] min-w-36 flex-col items-center justify-center rounded-full bg-linear-to-b sm:h-42 sm:w-42">
             <h1 className="text-Neutral-white text-[66px] font-bold sm:text-[62px]">
               76
             </h1>
@@ -28,13 +28,13 @@ export default function Home() {
             </h1>
           </div>
           <div>
-            <p className="text-Neutral-pale-blue/75 hidden sm:block pb-4 text-center text-sm sm:text-base">
+            <p className="text-Neutral-pale-blue/75 hidden pb-4 text-center text-sm sm:block sm:text-base">
               You scored higher than 65% of <br />
               the people who have taken <br />
               these tests.
             </p>
 
-            <p className="text-Neutral-pale-blue/75 pb-4 text-center text-lg sm:text-base sm:hidden">
+            <p className="text-Neutral-pale-blue/75 pb-4 text-center text-lg sm:hidden sm:text-base">
               You scored higher than 65% of the <br /> people who have taken
               these tests.
             </p>
@@ -68,7 +68,7 @@ export default function Home() {
           ))}
 
           <div>
-            <button className="bg-Neutral-dark-gray-blue text-Neutral-white w-full rounded-full px-3 py-4 text-lg font-medium sm:py-5 sm:text-lg sm:font-bold">
+            <button className="bg-Neutral-dark-gray-blue text-Neutral-white w-full rounded-full px-3 py-4 sm:py-3 text-lg font-medium sm:text-lg sm:font-bold">
               Continue
             </button>
           </div>

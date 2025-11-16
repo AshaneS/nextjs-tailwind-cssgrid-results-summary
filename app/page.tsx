@@ -68,7 +68,7 @@ export default function Home() {
           ))}
 
           <div>
-            <button className="bg-Neutral-dark-gray-blue text-Neutral-white w-full rounded-full px-3 py-4 text-lg font-medium sm:py-3 sm:text-lg sm:font-bold">
+            <button className="bg-Neutral-dark-gray-blue text-Neutral-white from-Gradient-light-slate-blue-background to-Gradient-Light-royal-blue-background w-full rounded-full px-3 py-4 text-lg font-medium hover:cursor-pointer hover:bg-linear-to-b sm:py-3 sm:text-lg sm:font-bold">
               Continue
             </button>
           </div>
